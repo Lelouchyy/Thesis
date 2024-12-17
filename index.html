@@ -30,14 +30,27 @@
             font-weight: bold;
         }
 
-        input, select {
+        select {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 1em;
+            background-color: #fafafa; 
         }
+        input {
+            width: 95%; /* You can change this value to adjust the width */
+            max-width: 500px; /* Set a maximum width to prevent it from being too large on wide screens */
+            padding: 10px;
+            margin: 0 auto 15px auto; /* Horizontally centers the input */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            background-color: #fafafa;
+            display: block; /* Ensures the input is a block-level element */
+        }
+
 
         button {
             background-color: #28a745;
@@ -59,6 +72,30 @@
             font-size: 1.2em;
             font-weight: bold;
         }
+
+        /* Responsive Design for mobile screens */
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            input, select {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+
+            button {
+                padding: 12px;
+                font-size: 1.1em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+}
+
+
     </style>
 </head>
 <body>
@@ -72,7 +109,6 @@
             <input type="text" id="student-id" name="student-id" placeholder="Enter your student ID" required>
 
             <!-- Payment Transaction Section -->
-            <div class="section-title">Payment Transaction</div>
             <label for="payment-purpose">Select Payment Purpose</label>
             <select id="payment-purpose" name="payment-purpose" required>
                 <option value="" disabled selected>Select your payment purpose</option>
@@ -82,7 +118,6 @@
             </select>
 
             <!-- Request Form Section -->
-            <div class="section-title">Request Form</div>
             <label for="request-purpose">Select Request Purpose</label>
             <select id="request-purpose" name="request-purpose" required>
                 <option value="" disabled selected>Select your request</option>
