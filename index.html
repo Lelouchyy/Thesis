@@ -14,7 +14,7 @@
         .form-container {
             background: #ffffff;
             padding: 20px;
-            max-width: 400px;
+            max-width: 500px;
             margin: auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -53,6 +53,12 @@
         button:hover {
             background-color: #218838;
         }
+
+        .section-title {
+            margin-top: 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -64,16 +70,33 @@
 
             <label for="student-id">Student ID</label>
             <input type="text" id="student-id" name="student-id" placeholder="Enter your student ID" required>
-        <h2>PURPOSE</h2>
-            <label for="purpose">REQUEST FORM</label>
-            <select id="purpose" name="purpose" required>
-                <option value="" disabled selected>Select your purpose</option>
-                <option value="uniforms">Getting Uniforms</option>
-                <option value="tuition">Paying Tuition</option>
-                <option value="requirements">Getting Requirements</option>
+
+            <!-- Payment Transaction Section -->
+            <div class="section-title">Payment Transaction</div>
+            <label for="payment-purpose">Select Payment Purpose</label>
+            <select id="payment-purpose" name="payment-purpose" required>
+                <option value="" disabled selected>Select your payment purpose</option>
+                <option value="uniform">Uniform</option>
+                <option value="tuition">Tuition</option>
+                <option value="balance">Balance</option>
             </select>
 
-            <button type="submit">Register</button>
+            <!-- Request Form Section -->
+            <div class="section-title">Request Form</div>
+            <label for="request-purpose">Select Request Purpose</label>
+            <select id="request-purpose" name="request-purpose" required>
+                <option value="" disabled selected>Select your request</option>
+                <option value="copy-of-grades">Copy of Grades</option>
+                <option value="certificate-of-grades">Certificate of Grades</option>
+                <option value="certificate-of-enrollment">Certificate of Enrollment</option>
+                <option value="certificate-of-honorable-dismissal">Certificate of Honorable Dismissal</option>
+                <option value="good-moral-certificate">Good Moral Certificate</option>
+                <option value="certificate-of-english-medium">Certificate of English Medium of Instruction</option>
+                <option value="certificate-of-gwa">Certificate of GWA</option>
+                <option value="certificate-as-graduate">Certificate as Graduate</option>
+            </select>
+
+            <button type="submit">Submit</button>
         </form>
     </div>
 </body>
